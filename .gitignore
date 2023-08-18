@@ -1,0 +1,61 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Compiled output
+/target/
+
+# Maven wrapper
+.mvn/wrapper/
+
+# IDE files
+.settings/
+
+# Compiled Java classes
+**/*.class
+
+# Compiled Java JAR files
+*.jar
+
+# Node.js files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# macOS files
+.DS_Store
+
+# IDE-specific files
+.idea/
+.vscode/
+
