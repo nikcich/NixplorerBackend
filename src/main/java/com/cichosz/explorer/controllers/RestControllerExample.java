@@ -1,5 +1,8 @@
 package com.cichosz.explorer.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +25,23 @@ import java.util.List;
 @RestController
 @RequestMapping("/explorer")
 public class RestControllerExample {
+	
+	@Autowired
+    private ApplicationContext context;
+	
+	@CrossOrigin
+	@GetMapping("/shutdown")
+    public void shutdown() {
+        Thread thread = new Thread(() -> {
+            try {
+                Thread.sleep(1000); // Optional delay before shutting down
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            SpringApplication.exit(context);
+        });
+        thread.start();
+    }
 
 	@CrossOrigin
     @GetMapping("/strings")
